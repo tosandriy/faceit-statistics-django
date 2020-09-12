@@ -1,0 +1,184 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+/*Общее*/
+a {
+	color: #fff;
+	text-decoration: none;
+}
+body {
+	font-family: "Mina", sans-serif;
+	font-weight: 400;
+	background: #f1f1f1;
+}
+.page {
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	width: 60%;
+	position: relative;
+	background: #fff;
+}
+button:hover {
+	cursor: pointer;
+}
+/*Style Header*/
+.page__header {
+	background: #292626;
+	width: 100%;
+}
+.header__content {
+	height: 64px;
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	width: 60%;
+	align-items: center;
+	position: relative;
+}
+
+.site_name {
+	color: #fff;
+	font-size: 22px;
+	font-weight: 700;
+}
+
+.logo {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	z-index: 0;
+}
+
+.header__nav {
+	margin-left: 83px;
+	font-size: 14px;
+	line-height: 16px;
+	align-items: center;
+	display: flex;
+}
+.header__nav a {
+	margin-right: 36px;
+	height: 100%;
+	padding-top: 22px;
+	border-bottom: #292626 2px solid;
+	transition: 0.3s;
+}
+.header__nav a:hover {
+	color: #CE0000;
+	border-bottom: #CE0000 2px solid;
+}
+
+
+.header__left {
+	z-index: 1;
+	display: flex;
+}
+.header__right {
+	z-index: 1;
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.search {
+	background-image: url(../images/vectors/lupa.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-position: 95%;
+	border-radius: 5px;
+	height: 30px;
+	width: 270px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border: none;
+	outline: none;
+}
+.login {
+	margin-left: 100px;
+	font-size: 14px;
+	line-height: 16px;
+}
+
+
+
+/*top slider*/
+.dots li button:before {
+	color: #fff;
+	transform: scale(1.75);
+}
+.dots li.slick-active button:before {
+	color: #fff;
+}
+.slider {
+	width: 100%;
+}
+.slide {
+	position: relative;
+}
+.slide img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	z-index: 4;
+	-webkit-filter: brightness(38%);
+  	filter: brightness(38%);
+}
+.slide_info {
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	color: #fff;
+}
+.top_slider_film_title {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 32px;
+	line-height: 37px;
+	width: 540px;
+	margin-left: 70px;
+	margin-top: 32px;
+}
+.slider_buttons {
+	display: flex;
+	margin-left: 70px;
+	width: 900px;
+	position: absolute;
+	bottom: 0;
+}
+.top_slider_info_right {
+	margin-left: auto;
+	margin-right: 0;
+	display: flex;
+}
+.top_slider_button {
+	background: none;
+	border: none;
+	outline: none;
+}
+.top_slider_info_left {
+	display: flex;
+}
+.tr_sub {
+	width: 255px;
+	height: 55px;
+	border-radius: 5px;
+	display: flex;
+	color: #fff;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	background: #CE0000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.subscribe {
+	border: 1px solid #fff;
+	background: none;
+	margin-left: 20px;
+}
