@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Name</title>
+	<link rel="stylesheet" type="text/css" href="css/Chart.min.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body class="body_stats">
+	<header>
+		<div class="header_content">
+			<div class="logo">
+				<img src="images/logo.jpg">
+			</div>
+			<div class="search_block">
+				<form class="search" id="desktop-search">
+					<input type="text" name="text_search" class="search_input" placeholder="Faceit Nickname">
+					<button type="submit" class="search_btn"><img src="images/search.png"></button>
+				</form>
+				<div class="search_block_close">
+					<img src="images/x.png">
+				</div>
+			</div>
+			<div class="search_button_mobile">
+				<img src="images/search.png">
+			</div>
+		</div>
+	</header>
+	<main class="main_stats" id="app">
+		<div class="basic_stats">
+			<div class="main_content basic_stats_content">
+				<img src="images/ava.png" class="ava">
+				<div class="player_info">
+					<div class="info_top">
+						<h2 class="nick">Enotik1338</h2>
+						<div class="player_links">
+							<a href="#" class="facit_link">
+								<img src="images/faceit-logo.png">
+							</a>
+							<a href="#" class="steam_link">
+								<img src="images/steam-logo.png">
+							</a>
+						</div>
+					</div>
+					<div class="info_bottom">
+						<div class="lifetime_stats">
+							<h2 class="lifetime_stats_title info_title">Lifetime Stats:</h2>
+							<div class="lifetime_stats_block stats_block">
+								<div class="stats_section kd_section">
+									<span class="stats_label">K/D</span><br>
+									<span class="stats_value">1.35</span>
+								</div>
+								<div class="stats_section win_rate">
+									<span class="stats_label">Win Rate</span><br>
+									<span class="stats_value"> 54%
+									</span>
+								</div>
+								<div class="stats_section headshots">
+									<span class="stats_label">HS rate</span><br>
+									<span class="stats_value">44%</span>
+								</div>
+								<div class="stats_section matches">
+									<span class="stats_label">Matches</span><br>
+									<span class="stats_value">576</span>
+								</div>
+							</div>
+						</div>
+						<div class="stats_line">
+						</div>
+						<div class="last20_stats">
+							<h2 class="last20_stats_title info_title">Lifetime Stats:</h2>
+							<div class="last20_stats_block stats_block">
+								<div class="stats_section kd_section">
+									<span class="stats_label">K/D</span><br>
+									<span class="stats_value">1.45</span>
+								</div>
+								<div class="stats_section win_rate">
+									<span class="stats_label">Win Rate</span><br>
+									<span class="stats_value"> 40%
+									</span>
+								</div>
+								<div class="stats_section headshots">
+									<span class="stats_label">HS rate</span><br>
+									<span class="stats_value">41%</span>
+								</div>
+								<div class="stats_section avg_kills">
+									<span class="stats_label">Average Kills</span><br>
+									<span class="stats_value">26.45
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="elo_graphics">
+			<div class="main_content elo_graphics_content">
+				<div class="elo_graphics_title">
+					<h2>
+						ELO progress in last 20 matches
+					</h2>
+				</div>
+				<div class="elo_graphics_block">
+					<div class="elo_chart_block">
+						<canvas class="elo_chart"></canvas>
+						<div class="elo_info">
+							<div class="lvl">
+							</div>
+							<div class="elo">
+							</div>
+							<div class="remain">
+							</div>
+						</div>
+					</div>
+					<div class="graph">
+						<canvas class="graph_chart"></canvas>
+					</div>
+				</div>
+		  	</div>
+		</div>
+		<div class="match_stats">
+			<div class="main_content match_stats_content">
+				
+				<div class="match_stats_title">
+					<h2>Last 20 matches stats</h2>
+				</div>
+				<div class="container">
+					<div class="thread_block">
+						<div class="thread">
+							<div>RESULT
+							</div>
+							<div>TEAM
+							</div>
+							<div>K/A/D
+							</div>
+							<div>K/D
+							</div>
+							<div>MAP
+							</div>
+							<div>HS %
+							</div>
+							<div>ELO
+							</div>
+							<div>DATE
+							</div>
+							<div>
+							</div>
+						</div>
+					</div>
+					<div class="match_stats_block">
+					<div class="match match1">
+						<div class="match_container">
+							<div class="result"><span class="current_result">WIN</span><span>16/14</span></div>
+							<div class="team">UDMURT_POWER</div>
+							<div class="kad">21 / 6 / 14</div>
+							<div class="kd">1.5</div>
+							<div class="map">de_dust2</div>
+							<div class="hs">48%</div>
+							<div class="elo_match"><span class="elo_value_match">1755</span><span class="elo_change">+25</span></div>
+							<div class="date_match"><span class="date">2020-09-03</span><span class="time">20:34</span></div>
+							<div></div>
+						</div>
+						<img src="images/dust_2.png" class="map_img">
+						<div class="scoreboard">
+							<table class="table scoreboard_team_1">
+								<tbody>
+									<tr>
+										<td colspan="13">
+											<div class="scoreboard_title">
+												<div class="scoreboard_team_title">team_v1ad0s88
+												</div>
+												<div class="scoreboard_team_result scoreboard_team_result_win">
+											 	WIN
+												</div>
+											</div>
+										</td>
+									</tr>
+        							<tr class="match_stat_row">
+          								<th>#</th>
+          								<th>Player</th>
+										<th>Kills</th>
+										<th>Assists</th>
+										<th>Deaths</th>
+										<th>K/R Ratio</th>
+										<th>K/D Ratio</th>
+										<th>Headshot</th>
+										<th>Headshots %</th>
+										<th>MVPs</th>
+										<th>Triple Kills</th>
+										<th>Quadro Kills</th>
+										<th>Penta Kills</th>
+									</tr>
+									<tr class="team_player_info">
+          								<td>1</td>
+										<td>
+											<a href="#">mastrodaedra</a>
+										</td>
+										<td>
+											<div class="table_cell">
+												<span>35</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>8</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>24</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1.46</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>19</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>54</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>5</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>3</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>0</span>
+											</div>
+										</td>
+									</tr>
+									<tr class="team_player_info">
+          								<td>2</td>
+										<td>
+											<a href="#">mastrodaedra</a>
+										</td>
+										<td>
+											<div class="table_cell">
+												<span>35</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>8</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>24</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1.46</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>19</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>54</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>5</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>3</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>0</span>
+											</div>
+										</td>
+									</tr>
+									<tr class="team_player_info">
+          								<td>3</td>
+										<td>
+											<a href="#">mastrodaedra</a>
+										</td>
+										<td>
+											<div class="table_cell">
+												<span>35</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>8</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>24</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1.46</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>19</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>54</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>5</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>3</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>0</span>
+											</div>
+										</td>
+									</tr>
+									<tr class="team_player_info">
+          								<td>4</td>
+										<td>
+											<a href="#">mastrodaedra</a>
+										</td>
+										<td>
+											<div class="table_cell">
+												<span>35</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>8</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>24</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1.46</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>19</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>54</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>5</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>3</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>0</span>
+											</div>
+										</td>
+									</tr>
+									<tr class="team_player_info">
+          								<td>5</td>
+										<td>
+											<a href="#">mastrodaedra</a>
+										</td>
+										<td>
+											<div class="table_cell">
+												<span>35</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>8</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>24</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1.46</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>19</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>54</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>5</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>3</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>0</span>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table scoreboard_team_2">
+								<tbody>
+									<tr>
+										<td colspan="13">
+											<div class="scoreboard_title">
+												<div class="scoreboard_team_title">team_v1ad0s88
+												</div>
+												<div class="scoreboard_team_result scoreboard_team_result_lose">
+											 	LOSE
+												</div>
+											</div>
+										</td>
+									</tr>
+        							<tr class="match_stat_row">
+          								<th>#</th>
+          								<th>Player</th>
+										<th>Kills</th>
+										<th>Assists</th>
+										<th>Deaths</th>
+										<th>K/R Ratio</th>
+										<th>K/D Ratio</th>
+										<th>Headshot</th>
+										<th>Headshots %</th>
+										<th>MVPs</th>
+										<th>Triple Kills</th>
+										<th>Quadro Kills</th>
+										<th>Penta Kills</th>
+									</tr>
+									<tr class="team_player_info">
+          								<td>1</td>
+										<td>
+											<a href="#">mastrodaedra</a>
+										</td>
+										<td>
+											<div class="table_cell">
+												<span>35</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>8</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>24</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1.46</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>19</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>54</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>5</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>3</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>0</span>
+											</div>
+										</td>
+									</tr>
+									<tr class="team_player_info">
+          								<td>2</td>
+										<td>
+											<a href="#">mastrodaedra</a>
+										</td>
+										<td>
+											<div class="table_cell">
+												<span>35</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>8</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>24</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1.46</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>19</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>54</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>5</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>3</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>0</span>
+											</div>
+										</td>
+									</tr>
+									<tr class="team_player_info">
+          								<td>3</td>
+										<td>
+											<a href="#">mastrodaedra</a>
+										</td>
+										<td>
+											<div class="table_cell">
+												<span>35</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>8</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>24</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1.46</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>19</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>54</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>5</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>3</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>0</span>
+											</div>
+										</td>
+									</tr>
+									<tr class="team_player_info">
+          								<td>4</td>
+										<td>
+											<a href="#">mastrodaedra</a>
+										</td>
+										<td>
+											<div class="table_cell">
+												<span>35</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>8</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>24</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1.46</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>19</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>54</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>5</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>3</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>0</span>
+											</div>
+										</td>
+									</tr>
+									<tr class="team_player_info">
+          								<td>5</td>
+										<td>
+											<a href="#">mastrodaedra</a>
+										</td>
+										<td>
+											<div class="table_cell">
+												<span>35</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>8</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>24</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1.46</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>19</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>54</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>5</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>3</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>1</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>0</span>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						
+					</div>
+					<div class="match match2">
+						<div class="match_container">
+							<div class="result"><span class="current_result">WIN</span><span>16/14</span></div>
+							<div class="team">UDMURT_POWER</div>
+							<div class="kad">21 / 6 / 14</div>
+							<div class="kd">1.5</div>
+							<div class="map">de_dust2</div>
+							<div class="hs">48%</div>
+							<div class="elo_match"><span class="elo_value_match">1755</span><span class="elo_change">+25</span></div>
+							<div class="date_match"><span class="date">2020-09-03</span><span class="time">20:34</span></div>
+						</div>
+						<img src="images/dust_2.png" class="map_img">
+					</div>
+					<div class="match match3">
+						<div class="match_container">
+							<div class="result"><span class="current_result">WIN</span><span>16/14</span></div>
+							<div class="team">UDMURT_POWER</div>
+							<div class="kad">21 / 6 / 14</div>
+							<div class="kd">1.5</div>
+							<div class="map">de_dust2</div>
+							<div class="hs">48%</div>
+							<div class="elo_match"><span class="elo_value_match">1755</span><span class="elo_change">+25</span></div>
+							<div class="date_match"><span class="date">2020-09-03</span><span class="time">20:34</span></div>
+						</div>
+						<img src="images/dust_2.png" class="map_img">
+					</div>
+					<div class="match match4">
+						<div class="match_container">
+							<div class="result"><span class="current_result">WIN</span><span>16/14</span></div>
+							<div class="team">UDMURT_POWER</div>
+							<div class="kad">21 / 6 / 14</div>
+							<div class="kd">1.5</div>
+							<div class="map">de_dust2</div>
+							<div class="hs">48%</div>
+							<div class="elo_match"><span class="elo_value_match">1755</span><span class="elo_change">+25</span></div>
+							<div class="date_match"><span class="date">2020-09-03</span><span class="time">20:34</span></div>
+						</div>
+						<img src="images/dust_2.png" class="map_img">
+					</div>
+					<div class="match match5">
+						<div class="match_container">
+							<div class="result"><span class="current_result">LOSE</span><span>14/16</span></div>
+							<div class="team">UDMURT_POWER</div>
+							<div class="kad">5 / 6 / 14</div>
+							<div class="kd">0.7</div>
+							<div class="map">de_dust2</div>
+							<div class="hs">48%</div>
+							<div class="elo_match"><span class="elo_value_match">1730</span><span class="elo_change">-25</span></div>
+							<div class="date_match"><span class="date">2020-09-03</span><span class="time">20:34</span></div>
+						</div>
+						<img src="images/dust_2.png" class="map_img">
+					</div>
+					<div class="match match6">
+						<div class="match_container">
+							<div class="result"><span class="current_result">LOSE</span><span>14/16</span></div>
+							<div class="team">UDMURT_POWER</div>
+							<div class="kad">5 / 6 / 14</div>
+							<div class="kd">0.7</div>
+							<div class="map">de_dust2</div>
+							<div class="hs">48%</div>
+							<div class="elo_match"><span class="elo_value_match">1730</span><span class="elo_change">-25</span></div>
+							<div class="date_match"><span class="date">2020-09-03</span><span class="time">20:34</span></div>
+						</div>
+						<img src="images/dust_2.png" class="map_img">
+					</div>
+					<div class="match match1">
+						<div class="match_container">
+							<div class="result"><span class="current_result">LOSE</span><span>14/16</span></div>
+							<div class="team">UDMURT_POWER</div>
+							<div class="kad">5 / 6 / 14</div>
+							<div class="kd">0.7</div>
+							<div class="map">de_dust2</div>
+							<div class="hs">48%</div>
+							<div class="elo_match"><span class="elo_value_match">1730</span><span class="elo_change">-25</span></div>
+							<div class="date_match"><span class="date">2020-09-03</span><span class="time">20:34</span></div>
+						</div>
+						<img src="images/dust_2.png" class="map_img">
+					</div>
+					<div class="match match7">
+						<div class="match_container">
+							<div class="result"><span class="current_result">WIN</span><span>16/14</span>
+							</div>
+							<div class="team">UDMURT_POWER
+							</div>
+							<div class="kad">21 / 6 / 14
+							</div>
+							<div class="kd">1.5
+							</div>
+							<div class="map">de_dust2
+							</div>
+							<div class="hs">48%
+							</div>
+							<div class="elo_match"><span class="elo_value_match">1755</span><span class="elo_change">+25</span>
+							</div>
+							<div class="date_match"><span class="date">2020-09-03</span><span class="time">20:34</span>
+							</div>
+						</div>
+						<img src="images/dust_2.png" class="map_img">
+					</div>
+					<div class="match match9">
+						<div class="match_container">
+							<div class="result"><span class="current_result">LOSE</span><span>14/16</span></div>
+							<div class="team">UDMURT_POWER</div>
+							<div class="kad">5 / 6 / 14</div>
+							<div class="kd">0.7</div>
+							<div class="map">de_dust2</div>
+							<div class="hs">48%</div>
+							<div class="elo_match"><span class="elo_value_match">1730</span><span class="elo_change">-25</span></div>
+							<div class="date_match"><span class="date">2020-09-03</span><span class="time">20:34</span></div>
+						</div>
+						<img src="images/dust_2.png" class="map_img">
+					</div>
+					<div class="match match10">
+						<div class="match_container">
+							<div class="result"><span class="current_result">LOSE</span><span>14/16</span></div>
+							<div class="team">UDMURT_POWER</div>
+							<div class="kad">5 / 6 / 14</div>
+							<div class="kd">0.7</div>
+							<div class="map">de_dust2</div>
+							<div class="hs">48%</div>
+							<div class="elo_match"><span class="elo_value_match">1730</span><span class="elo_change">-25</span></div>
+							<div class="date_match"><span class="date">2020-09-03</span><span class="time">20:34</span></div>
+						</div>
+						<img src="images/dust_2.png" class="map_img">
+					</div>
+					<div class="match match11">
+						<div class="match_container">
+							<div class="result"><span class="current_result">LOSE</span><span>14/16</span></div>
+							<div class="team">UDMURT_POWER</div>
+							<div class="kad">5 / 6 / 14</div>
+							<div class="kd">0.7</div>
+							<div class="map">de_dust2</div>
+							<div class="hs">48%</div>
+							<div class="elo_match"><span class="elo_value_match">1730</span><span class="elo_change">-25</span></div>
+							<div class="date_match"><span class="date">2020-09-03</span><span class="time">20:34</span></div>
+						</div>
+						<img src="images/dust_2.png" class="map_img">
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="footer_stats">
+		<div class="footer_container">
+			<div class="socials">
+				<a href="#"><img src="images/vk.png" alt=""></a>
+				<a href="#"><img src="images/instagram.png" alt=""></a>
+				<a href="#"><img src="images/twitter.png" alt=""></a>
+				<a href="#"><img src="images/facebook.png" alt=""></a>
+			</div>
+		</div>
+	</footer>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/slick.js"></script>
+	<script src="js/Chart.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
