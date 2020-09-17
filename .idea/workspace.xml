@@ -1,7 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b22d6ac-8dd4-4c7a-a085-efc2ae2015e0" name="Default Changelist" comment="" />
+    <list default="true" id="8b22d6ac-8dd4-4c7a-a085-efc2ae2015e0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/faceit_stats_django/parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/faceit_stats_django/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/css/Chart.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/css/ajax-loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/css/fonts/slick.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/css/fonts/slick.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/css/fonts/slick.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/css/fonts/slick.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/css/framework.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/css/slick-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/css/slick.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/css/style (2).css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/css/style (3).css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/css/style — копия.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/BrutalType-Black.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/BrutalType-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/BrutalType-ExtraBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/BrutalType-ExtraLight.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/BrutalType-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/BrutalType-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/BrutalType-Thin.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/BrutalType.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/Lato-Black.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/Lato-BlackItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/Lato-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/Lato-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/Lato-Hairline.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/Lato-HairlineItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/Lato-Heavy.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/Lato-HeavyItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/Lato-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/Lato-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/Lato-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/Lato-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/Lato-MediumItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/Lato-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/Lato-Semibold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/Lato-SemiboldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/Lato-Thin.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/Lato-ThinItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/OpenSans-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/OpenSans-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/OpenSans-ExtraBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/OpenSans-ExtraBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/OpenSans-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/OpenSans-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/OpenSans-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/OpenSans-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/OpenSans-SemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/OpenSans-SemiBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/PTS55F.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/PTS56F.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/PTS75F.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/PTS76F.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/SegoeUI.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/SourceSansPro-Black.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/SourceSansPro-BlackItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/SourceSansPro-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/SourceSansPro-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/SourceSansPro-ExtraLight.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/SourceSansPro-ExtraLightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/SourceSansPro-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/SourceSansPro-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/SourceSansPro-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/SourceSansPro-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/SourceSansPro-SemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/SourceSansPro-SemiBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/Source_Sans_Pro.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/dinpro-black.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/dinpro-bold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/dinpro-light.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/dinpro-medium.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/dinpro-regular.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/font.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/fonts/slick.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/fonts/slick.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/fonts/slick.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/fonts/slick.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/lato.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/ptsans.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/segoeui.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/segoeuib.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/segoeuii.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/segoeuil.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/segoeuisl.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/segoeuiz.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/seguibl.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/seguibli.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/seguili.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/seguisb.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/seguisbi.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/fonts/seguisli.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/images/Design.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/images/ava.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/images/back.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/images/dust_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/images/facebook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/images/faceit-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/images/hiclipart.com.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/images/instagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/images/logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/images/media.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/images/steam-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/images/twitter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/images/vk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/js/Chart.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/js/Chart.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/js/jquery-3.3.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/js/jquery.raty.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/js/player.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/js/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/static/js/slick.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/templates/first_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/faceit_stats_django/templates/first_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/templates/stats.html" beforeDir="false" afterPath="$PROJECT_DIR$/faceit_stats_django/templates/stats.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/faceit_stats_django/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceit_stats_django/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/faceit_stats_django/views.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +132,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/faceit_stats_django/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="88" lean-forward="true" selection-start-line="12" selection-start-column="88" selection-end-line="12" selection-end-column="88" />
+            <state relative-caret-position="394">
+              <caret line="158" column="93" selection-start-line="158" selection-start-column="93" selection-end-line="158" selection-end-column="93" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -25,29 +144,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/faceit_stats_django/parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="138" selection-start-line="2" selection-start-column="6" selection-end-line="3" selection-end-column="138" />
+            <state relative-caret-position="68">
+              <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/faceit_stats_django/urls.py">
+        <entry file="file://$PROJECT_DIR$/faceit_stats_django/templates/stats.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-              <folding>
-                <element signature="e#643#675#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1343">
+              <caret line="79" column="84" selection-start-line="79" selection-start-column="84" selection-end-line="79" selection-end-column="84" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/faceit_stats_django/settings.py">
+        <entry file="file://$PROJECT_DIR$/faceit_stats_django/templates/first_page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="699">
-              <caret line="114" selection-start-line="114" selection-end-line="114" />
+            <state relative-caret-position="663">
+              <caret line="39" column="65" selection-start-line="39" selection-start-column="65" selection-end-line="39" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -58,35 +174,52 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>webdriver</find>
+      <find>faceit_stats_djangodjango</find>
+      <find>user_stat</find>
+      <find>_</find>
+      <find>match_stats_block</find>
+      <find>match.0</find>
+      <find>kd_for_last_matches</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/faceit_stats_django/parsers.py" />
+        <option value="$PROJECT_DIR$/faceit_stats_django/settings.py" />
+        <option value="$PROJECT_DIR$/faceit_stats_django/templates/first_page.html" />
         <option value="$PROJECT_DIR$/faceit_stats_django/urls.py" />
+        <option value="$PROJECT_DIR$/faceit_stats_django/templates/test.html" />
+        <option value="$USER_HOME$/AppData/Local/Temp/Rar$DRa5460.47505/faceit-statistics-django-templates/faceit/stats.html" />
         <option value="$PROJECT_DIR$/faceit_stats_django/parser.py" />
+        <option value="$PROJECT_DIR$/faceit_stats_django/templates/stats.html" />
         <option value="$PROJECT_DIR$/faceit_stats_django/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
-    <option name="y" value="-8" />
+    <option name="x" value="-74" />
+    <option name="y" value="188" />
     <option name="width" value="976" />
     <option name="height" value="1056" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -105,14 +238,28 @@
               <item name="faceit_stats_django" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="faceit_stats_django" type="b2602c69:ProjectViewProjectNode" />
+              <item name="faceit_stats_django" type="462c0819:PsiDirectoryNode" />
+              <item name="faceit_stats_django" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="faceit_stats_django" type="b2602c69:ProjectViewProjectNode" />
+              <item name="faceit_stats_django" type="462c0819:PsiDirectoryNode" />
+              <item name="faceit_stats_django" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/faceit_stats_django/static" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -120,6 +267,11 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\django_projects\faceit_stats_django\faceit_stats_django\static" />
       <recent name="E:\django_projects\faceit_stats_django\faceit_stats_django\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\django_projects\faceit_stats_django\faceit_stats_django\static\images" />
+      <recent name="E:\django_projects\faceit_stats_django\faceit_stats_django" />
+      <recent name="E:\django_projects\faceit_stats_django" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -177,9 +329,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="faceit_stats_django" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/faceit_stats_django" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/faceit_stats_django/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.parser" />
+        <item itemvalue="Python.views" />
         <item itemvalue="Python.parsers" />
       </list>
     </recent_temporary>
@@ -197,9 +371,37 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.059009485" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32912722" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="6" visible="true" weight="0.3922187" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32912722" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32912722" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32912722" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -211,25 +413,16 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32912722" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32912722" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/faceit_stats_django/parsers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/faceit_stats_django/parsers.py" />
     <entry file="file://$PROJECT_DIR$/../videoderby_git/videoderby/videoderby/parser/movie_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="869">
@@ -240,40 +433,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/faceit_stats_django/settings.py">
+    <entry file="file://$PROJECT_DIR$/../videoderby_git/videoderby/videoderby/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="699">
-          <caret line="114" selection-start-line="114" selection-end-line="114" />
+        <state relative-caret-position="-65">
+          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/faceit_stats_django/templates/first_page.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/faceit_stats_django/parser.py">
+    <entry file="file://$PROJECT_DIR$/faceit_stats_django/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="138" selection-start-line="2" selection-start-column="6" selection-end-line="3" selection-end-column="138" />
+        <state relative-caret-position="272">
+          <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+          <folding>
+            <element signature="e#318#342#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/faceit_stats_django/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
           <folding>
             <element signature="e#643#675#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/faceit_stats_django/templates/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="90" selection-start-line="11" selection-start-column="90" selection-end-line="11" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faceit_stats_django/static/js/slick.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa5460.47505/faceit-statistics-django-templates/faceit/stats.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12123">
+          <caret line="846" column="22" lean-forward="true" selection-start-line="846" selection-start-column="22" selection-end-line="846" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faceit_stats_django/static/images/de_overpass.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faceit_stats_django/static/images/de_train.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faceit_stats_django/static/images/de_vertigo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faceit_stats_django/static/images/facebook.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faceit_stats_django/static/images/de_nuke.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faceit_stats_django/static/images/de_mirage.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faceit_stats_django/static/images/de_inferno.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faceit_stats_django/static/images/de_dust2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faceit_stats_django/static/images/de_cache.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa5460.18611/faceit-statistics-django-templates/faceit/stats.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/faceit_stats_django/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="88" lean-forward="true" selection-start-line="12" selection-start-column="88" selection-end-line="12" selection-end-column="88" />
+        <state relative-caret-position="394">
+          <caret line="158" column="93" selection-start-line="158" selection-start-column="93" selection-end-line="158" selection-end-column="93" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faceit_stats_django/parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faceit_stats_django/templates/stats.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1343">
+          <caret line="79" column="84" selection-start-line="79" selection-start-column="84" selection-end-line="79" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faceit_stats_django/templates/first_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="65" selection-start-line="39" selection-start-column="65" selection-end-line="39" selection-end-column="65" />
         </state>
       </provider>
     </entry>

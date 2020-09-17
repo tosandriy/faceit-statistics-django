@@ -1,12 +1,13 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Name</title>
-	<link rel="stylesheet" type="text/css" href="css/Chart.min.css">
-	<link rel="stylesheet" href="css/slick.css">
-	<link rel="stylesheet" href="css/slick-theme.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/Chart.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/slick.css' %}">
+	<link rel="stylesheet" href="{% static 'css/slick-theme.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
 	<link href="https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
@@ -14,22 +15,22 @@
 <body>
 	<header>
 		<div class="logo">
-			<img src="images/logo.jpg">
+			<img src="{% static 'images/logo.jpg' %}">
 		</div>
 	</header>
 	<main class="main_stats">
 		<div class="basic_stats">
 			<div class="main_content basic_stats_content">
-				<img src="images/ava.png" class="ava">
+				<img src="{{user_picture}}" class="ava">
 				<div class="player_info">
 					<div class="info_top">
-						<h2 class="nick">Enotik1338</h2>
+						<h2 class="nick">{{faceit_username}}</h2>
 						<div class="player_links">
 							<a href="#" class="facit_link">
-								<img src="images/faceit-logo.png">
+								<img src="{% static 'images/faceit-logo.png' %}">
 							</a>
 							<a href="#" class="steam_link">
-								<img src="images/steam-logo.png">
+								<img src="{% static 'images/steam-logo.png' %}">
 							</a>
 						</div>
 					</div>
@@ -39,20 +40,20 @@
 							<div class="lifetime_stats_block stats_block">
 								<div class="stats_section kd_section">
 									<span class="stats_label">K/D</span><br>
-									<span class="stats_value">1.35</span>
+									<span class="stats_value">{{k_d}}</span>
 								</div>
 								<div class="stats_section win_rate">
 									<span class="stats_label">Win Rate</span><br>
-									<span class="stats_value"> 54%
+									<span class="stats_value"> {{win_rate}}%
 									</span>
 								</div>
 								<div class="stats_section headshots">
 									<span class="stats_label">Headshots</span><br>
-									<span class="stats_value">44%</span>
+									<span class="stats_value">{{hs_rate}}%</span>
 								</div>
 								<div class="stats_section matches">
 									<span class="stats_label">Matches</span><br>
-									<span class="stats_value">576</span>
+									<span class="stats_value">{{total_matches}}</span>
 								</div>
 							</div>
 						</div>
@@ -63,20 +64,20 @@
 							<div class="last20_stats_block stats_block">
 								<div class="stats_section kd_section">
 									<span class="stats_label">K/D</span><br>
-									<span class="stats_value">1.45</span>
+									<span class="stats_value">{{last_games_kd}}</span>
 								</div>
 								<div class="stats_section win_rate">
 									<span class="stats_label">Win Rate</span><br>
-									<span class="stats_value"> 40%
+									<span class="stats_value"> {{last_games_win_rate}}%
 									</span>
 								</div>
 								<div class="stats_section headshots">
 									<span class="stats_label">Headshots</span><br>
-									<span class="stats_value">41%</span>
+									<span class="stats_value">{{last_games_hs_rate}}%</span>
 								</div>
 								<div class="stats_section avg_kills">
 									<span class="stats_label">Average Kills</span><br>
-									<span class="stats_value">26.45
+									<span class="stats_value">{{last_games_avg_kills}}
 									</span>
 								</div>
 							</div>
@@ -126,7 +127,7 @@
 						</div>
 						<div>K/D
 						</div>
-						<div>MAP
+						<div>K/R
 						</div>
 						<div>HS %
 						</div>
@@ -137,157 +138,699 @@
 					</div>
 				</div>
 				<div class="match_stats_block">
+					{% for match in maps_info_list %}
 					<div class="match match1">
 						<div class="match_container">
-							<div class="result"><span class="current_result">WIN</span><span>16/14</span></div>
-							<div class="team">UDMURT_POWER</div>
-							<div class="kad">21 / 6 / 14</div>
-							<div class="kd">1.5</div>
-							<div class="map">de_dust2</div>
-							<div class="hs">48%</div>
-							<div class="elo_match"><span class="elo_value_match">1755</span><span class="elo_change">+25</span></div>
-							<div class="date_match"><span class="date">2020-09-03</span><span class="time">20:34</span></div>
+							<div class="result"><span class="current_result">{% if match.0%}WIN{%else%}LOSE{%endif%}</span><span>{{match.1}}</span></div>
+							<div class="team">{{match.2}}</div>
+							<div class="kad">{{match.3}} / {{match.4}} / {{match.5}}</div>
+							<div class="kd">{{match.6}}</div>
+							<div class="kr">{{match.7}}</div>
+							<div class="hs">{{match.8}}%</div>
+							<div class="elo_match"><span class="elo_value_match">{{match.9}}</span><span class="elo_change">{% if match.10 > 0 %}+{{match.10}}{% elif match.10 < 0 %}{{match.10}}{% else %}{{match.10}}{% endif %}</span></div>
+							<div class="date_match"><span class="date">{{match.11}}</span></div>
+							<div></div>
 						</div>
-						<img src="images/dust_2.png" class="map_img">
-					</div>
-					<div class="match match2">
-						<div class="match_container">
-							<div class="result"><span class="current_result">WIN</span><span>16/14</span></div>
-							<div class="team">UDMURT_POWER</div>
-							<div class="kad">21 / 6 / 14</div>
-							<div class="kd">1.5</div>
-							<div class="map">de_dust2</div>
-							<div class="hs">48%</div>
-							<div class="elo_match"><span class="elo_value_match">1755</span><span class="elo_change">+25</span></div>
-							<div class="date_match"><span class="date">2020-09-03</span><span class="time">20:34</span></div>
+						<img src="/static/images/{{match.12}}.png" class="map_img">
+						<div class="scoreboard">
+							<table class="table scoreboard_team_1">
+								<tbody>
+									<tr>
+										<td colspan="13">
+											<div class="scoreboard_title">
+												<div class="scoreboard_team_title">{{match.13.2}}
+												</div>
+												<div class="scoreboard_team_result scoreboard_team_result_win">
+											 	WIN
+												</div>
+											</div>
+										</td>
+									</tr>
+        							<tr class="match_stat_row">
+          								<th>#</th>
+          								<th>Player</th>
+										<th>Kills</th>
+										<th>Assists</th>
+										<th>Deaths</th>
+										<th>K/R Ratio</th>
+										<th>K/D Ratio</th>
+										<th>Headshot</th>
+										<th>Headshots %</th>
+										<th>MVPs</th>
+										<th>Triple Kills</th>
+										<th>Quadro Kills</th>
+										<th>Penta Kills</th>
+									</tr>
+									<tr class="team_player_info">
+          								<td>1</td>
+										<td>
+											<a href="#">{{match.13.0.0.0}}</a>
+										</td>
+										<td>
+											<div class="table_cell">
+												<span>{{match.13.0.0.1}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.0.2}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.0.3}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.0.4}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.0.5}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.0.6}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.0.7}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.0.8}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.0.9}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.0.10}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.0.11}}</span>
+											</div>
+										</td>
+									</tr>
+								<tr class="team_player_info">
+          								<td>2</td>
+										<td>
+											<a href="#">{{match.13.0.1.0}}</a>
+										</td>
+										<td>
+											<div class="table_cell">
+												<span>{{match.13.0.1.1}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.1.2}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.1.3}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.1.4}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.1.5}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.1.6}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.1.7}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.1.8}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.1.9}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.1.10}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.1.11}}</span>
+											</div>
+										</td>
+									</tr>
+								<tr class="team_player_info">
+          								<td>3</td>
+										<td>
+											<a href="#">{{match.13.0.2.0}}</a>
+										</td>
+										<td>
+											<div class="table_cell">
+												<span>{{match.13.0.2.1}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.2.2}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.2.3}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.2.4}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.2.5}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.2.6}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.2.7}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.2.8}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.2.9}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.2.10}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.2.11}}</span>
+											</div>
+										</td>
+									</tr>
+								<tr class="team_player_info">
+          								<td>4</td>
+										<td>
+											<a href="#">{{match.13.0.3.0}}</a>
+										</td>
+										<td>
+											<div class="table_cell">
+												<span>{{match.13.0.3.1}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.3.2}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.3.3}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.3.4}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.3.5}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.3.6}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.3.7}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.3.8}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.3.9}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.3.10}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.3.11}}</span>
+											</div>
+										</td>
+									</tr>
+								<tr class="team_player_info">
+          								<td>5</td>
+										<td>
+											<a href="#">{{match.13.0.4.0}}</a>
+										</td>
+										<td>
+											<div class="table_cell">
+												<span>{{match.13.0.4.1}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.4.2}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.4.3}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.4.4}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.4.5}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.4.6}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.4.7}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.4.8}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.4.9}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.4.10}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.0.4.11}}</span>
+											</div>
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+							<table class="table scoreboard_team_2">
+								<tbody>
+									<tr>
+										<td colspan="13">
+											<div class="scoreboard_title">
+												<div class="scoreboard_team_title">{{match.13.3}}
+												</div>
+												<div class="scoreboard_team_result scoreboard_team_result_lose">
+											 	LOSE
+												</div>
+											</div>
+										</td>
+									</tr>
+        							<tr class="match_stat_row">
+          								<th>#</th>
+          								<th>Player</th>
+										<th>Kills</th>
+										<th>Assists</th>
+										<th>Deaths</th>
+										<th>K/R Ratio</th>
+										<th>K/D Ratio</th>
+										<th>Headshot</th>
+										<th>Headshots %</th>
+										<th>MVPs</th>
+										<th>Triple Kills</th>
+										<th>Quadro Kills</th>
+										<th>Penta Kills</th>
+									</tr>
+									<tr class="team_player_info">
+          								<td>1</td>
+										<td>
+											<a href="#">{{match.13.1.0.0}}</a>
+										</td>
+										<td>
+											<div class="table_cell">
+												<span>{{match.13.1.0.1}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.0.2}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.0.3}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.0.4}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.0.5}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.0.6}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.0.7}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.0.8}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.0.9}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.0.10}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.0.11}}</span>
+											</div>
+										</td>
+									</tr>
+								<tr class="team_player_info">
+          								<td>2</td>
+										<td>
+											<a href="#">{{match.13.1.1.0}}</a>
+										</td>
+										<td>
+											<div class="table_cell">
+												<span>{{match.13.1.1.1}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.1.2}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.1.3}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.1.4}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.1.5}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.1.6}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.1.7}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.1.8}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.1.9}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.1.10}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.1.11}}</span>
+											</div>
+										</td>
+									</tr>
+								<tr class="team_player_info">
+          								<td>3</td>
+										<td>
+											<a href="#">{{match.13.1.2.0}}</a>
+										</td>
+										<td>
+											<div class="table_cell">
+												<span>{{match.13.1.2.1}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.2.2}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.2.3}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.2.4}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.2.5}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.2.6}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.2.7}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.2.8}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.2.9}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.2.10}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.2.11}}</span>
+											</div>
+										</td>
+									</tr>
+								<tr class="team_player_info">
+          								<td>4</td>
+										<td>
+											<a href="#">{{match.13.1.3.0}}</a>
+										</td>
+										<td>
+											<div class="table_cell">
+												<span>{{match.13.1.3.1}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.3.2}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.3.3}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.3.4}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.3.5}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.3.6}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.3.7}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.3.8}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.3.9}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.3.10}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.3.11}}</span>
+											</div>
+										</td>
+									</tr>
+								<tr class="team_player_info">
+          								<td>5</td>
+										<td>
+											<a href="#">{{match.13.1.4.0}}</a>
+										</td>
+										<td>
+											<div class="table_cell">
+												<span>{{match.13.1.4.1}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.4.2}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.4.3}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.4.4}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.4.5}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.4.6}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.4.7}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.4.8}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.4.9}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.4.10}}</span>
+											</div>
+										</td>
+										<td>
+											<div>
+												<span>{{match.13.1.4.11}}</span>
+											</div>
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
 						</div>
-						<img src="images/dust_2.png" class="map_img">
+
 					</div>
-					<div class="match match3">
-						<div class="match_container">
-							<div class="result"><span class="current_result">WIN</span><span>16/14</span></div>
-							<div class="team">UDMURT_POWER</div>
-							<div class="kad">21 / 6 / 14</div>
-							<div class="kd">1.5</div>
-							<div class="map">de_dust2</div>
-							<div class="hs">48%</div>
-							<div class="elo_match"><span class="elo_value_match">1755</span><span class="elo_change">+25</span></div>
-							<div class="date_match"><span class="date">2020-09-03</span><span class="time">20:34</span></div>
-						</div>
-						<img src="images/dust_2.png" class="map_img">
-					</div>
-					<div class="match match4">
-						<div class="match_container">
-							<div class="result"><span class="current_result">WIN</span><span>16/14</span></div>
-							<div class="team">UDMURT_POWER</div>
-							<div class="kad">21 / 6 / 14</div>
-							<div class="kd">1.5</div>
-							<div class="map">de_dust2</div>
-							<div class="hs">48%</div>
-							<div class="elo_match"><span class="elo_value_match">1755</span><span class="elo_change">+25</span></div>
-							<div class="date_match"><span class="date">2020-09-03</span><span class="time">20:34</span></div>
-						</div>
-						<img src="images/dust_2.png" class="map_img">
-					</div>
-					<div class="match match5">
-						<div class="match_container">
-							<div class="result"><span class="current_result">LOSE</span><span>14/16</span></div>
-							<div class="team">UDMURT_POWER</div>
-							<div class="kad">5 / 6 / 14</div>
-							<div class="kd">0.7</div>
-							<div class="map">de_dust2</div>
-							<div class="hs">48%</div>
-							<div class="elo_match"><span class="elo_value_match">1730</span><span class="elo_change">-25</span></div>
-							<div class="date_match"><span class="date">2020-09-03</span><span class="time">20:34</span></div>
-						</div>
-						<img src="images/dust_2.png" class="map_img">
-					</div>
-					<div class="match match6">
-						<div class="match_container">
-							<div class="result"><span class="current_result">LOSE</span><span>14/16</span></div>
-							<div class="team">UDMURT_POWER</div>
-							<div class="kad">5 / 6 / 14</div>
-							<div class="kd">0.7</div>
-							<div class="map">de_dust2</div>
-							<div class="hs">48%</div>
-							<div class="elo_match"><span class="elo_value_match">1730</span><span class="elo_change">-25</span></div>
-							<div class="date_match"><span class="date">2020-09-03</span><span class="time">20:34</span></div>
-						</div>
-						<img src="images/dust_2.png" class="map_img">
-					</div>
-					<div class="match match1">
-						<div class="match_container">
-							<div class="result"><span class="current_result">LOSE</span><span>14/16</span></div>
-							<div class="team">UDMURT_POWER</div>
-							<div class="kad">5 / 6 / 14</div>
-							<div class="kd">0.7</div>
-							<div class="map">de_dust2</div>
-							<div class="hs">48%</div>
-							<div class="elo_match"><span class="elo_value_match">1730</span><span class="elo_change">-25</span></div>
-							<div class="date_match"><span class="date">2020-09-03</span><span class="time">20:34</span></div>
-						</div>
-						<img src="images/dust_2.png" class="map_img">
-					</div>
-					<div class="match match7">
-						<div class="match_container">
-							<div class="result"><span class="current_result">WIN</span><span>16/14</span>
-							</div>
-							<div class="team">UDMURT_POWER
-							</div>
-							<div class="kad">21 / 6 / 14
-							</div>
-							<div class="kd">1.5
-							</div>
-							<div class="map">de_dust2
-							</div>
-							<div class="hs">48%
-							</div>
-							<div class="elo_match"><span class="elo_value_match">1755</span><span class="elo_change">+25</span>
-							</div>
-							<div class="date_match"><span class="date">2020-09-03</span><span class="time">20:34</span>
-							</div>
-						</div>
-						<img src="images/dust_2.png" class="map_img">
-					</div>
-					<div class="match match9">
-						<div class="match_container">
-							<div class="result"><span class="current_result">LOSE</span><span>14/16</span></div>
-							<div class="team">UDMURT_POWER</div>
-							<div class="kad">5 / 6 / 14</div>
-							<div class="kd">0.7</div>
-							<div class="map">de_dust2</div>
-							<div class="hs">48%</div>
-							<div class="elo_match"><span class="elo_value_match">1730</span><span class="elo_change">-25</span></div>
-							<div class="date_match"><span class="date">2020-09-03</span><span class="time">20:34</span></div>
-						</div>
-						<img src="images/dust_2.png" class="map_img">
-					</div>
-					<div class="match match10">
-						<div class="match_container">
-							<div class="result"><span class="current_result">LOSE</span><span>14/16</span></div>
-							<div class="team">UDMURT_POWER</div>
-							<div class="kad">5 / 6 / 14</div>
-							<div class="kd">0.7</div>
-							<div class="map">de_dust2</div>
-							<div class="hs">48%</div>
-							<div class="elo_match"><span class="elo_value_match">1730</span><span class="elo_change">-25</span></div>
-							<div class="date_match"><span class="date">2020-09-03</span><span class="time">20:34</span></div>
-						</div>
-						<img src="images/dust_2.png" class="map_img">
-					</div>
-					<div class="match match11">
-						<div class="match_container">
-							<div class="result"><span class="current_result">LOSE</span><span>14/16</span></div>
-							<div class="team">UDMURT_POWER</div>
-							<div class="kad">5 / 6 / 14</div>
-							<div class="kd">0.7</div>
-							<div class="map">de_dust2</div>
-							<div class="hs">48%</div>
-							<div class="elo_match"><span class="elo_value_match">1730</span><span class="elo_change">-25</span></div>
-							<div class="date_match"><span class="date">2020-09-03</span><span class="time">20:34</span></div>
-						</div>
-						<img src="images/dust_2.png" class="map_img">
-					</div>
+
+					{% endfor %}
+
 
 				</div>
 			</div>
@@ -296,16 +839,16 @@
 	<footer class="footer_stats">
 		<div class="footer_container">
 			<div class="socials">
-				<a href="#"><img src="images/vk.png" alt=""></a>
-				<a href="#"><img src="images/instagram.png" alt=""></a>
-				<a href="#"><img src="images/twitter.png" alt=""></a>
-				<a href="#"><img src="images/facebook.png" alt=""></a>
+				<a href="#"><img src="{% static 'images/vk.png' %}" alt=""></a>
+				<a href="#"><img src="{% static 'images/instagram.png' %}" alt=""></a>
+				<a href="#"><img src="{% static 'images/twitter.png' %}" alt=""></a>
+				<a href="#"><img src="{% static 'images/facebook.png' %}" alt=""></a>
 			</div>
 		</div>
 	</footer>
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/slick.js"></script>
-	<script src="js/Chart.bundle.min.js"></script>
-	<script src="js/script.js"></script>
+	<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+	<script src="{% static 'js/slick.js' %}"></script>
+	<script src="{% static 'js/Chart.bundle.min.js' %}"></script>
+	<script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

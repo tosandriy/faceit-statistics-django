@@ -5,7 +5,6 @@ for (i = 1; i < 21; i++){
     labels_chart.push(i)
 };
 labels_chart.reverse()
-console.log(labels_chart)
 $(document).ready(function(){
     var elo =1876
     var red='#f00000',orange='#ffc000',green='#00f000',grey='#a5a5a5',darkgrey='#5a5a5a';
@@ -79,10 +78,10 @@ $(document).ready(function(){
     $(".remain").html("You need " + (nextLvl+1 - elo) + " ELO to the next level");
     $(".match").each(function (index, element) {
         if ($(this).children(".match_container").children(".result").children(".current_result").html() == "WIN") {
-            $(this).addClass("match_win");
+            $(this).children(".match_container").addClass("match_win");
         }
         else{
-           $(this).addClass("match_lose"); 
+           $(this).children(".match_container").addClass("match_lose"); 
         } 
     });
     $(".result").each(function (index, element) {
@@ -91,52 +90,26 @@ $(document).ready(function(){
     });
     $(".kad").each(function (index, element) {
         let list1 = $(this).html().split(" / ");
-        console.log(list1[0]>=list1[2], list1[0],list1[2]);
-        ((list1[0]>=list1[2])?$(this).addClass("positive"):$(this).addClass("negative"))
+        ((Number(list1[0])>=Number(list1[2]))?$(this).addClass("positive"):$(this).addClass("negative"))
     });
     $(".kd").each(function (index, element) {
-        (($(this).html()>=1)?$(this).addClass("positive"):$(this).addClass("negative"))
+        ((Number($(this).html())>=1)?$(this).addClass("positive"):$(this).addClass("negative"))
     });
     $(".elo_change").each(function (index, element) {
         (($(this).html()>0)?$(this).addClass("positive"):$(this).addClass("negative"))
     });
-    })
-
-    /*
-    var pieChart = new Chart(chart, {
-        type: 'doughnut',
-        data: oilData,
-        options: chartOptions
+    $(".match_container").click(function(){return scrollPos = $(window).scrollTop(),$(this).parent().children(".scoreboard").toggleClass("scoreboard_show"),$(window).scrollTop(scrollPos)
     });
-    var red='#f00000',orange='#ffc000',green='#00f000',grey='#a5a5a5',darkgrey='#5a5a5a';
-    var prevClr,barClr,nextLvl,prevLvl,nextClr;switch(true){case(elo<800):lvl=1;prevClr=green;barClr=grey;nextClr=green;prevLvl=0;nextLvl=800;break;case(elo<950):lvl=2;prevClr=grey;barClr=green;nextClr=green;prevLvl=800;nextLvl=950;break;case(elo<1100):lvl=3;prevClr=green;barClr=green;nextClr=orange;prevLvl=950;nextLvl=1100;break;case(elo<1250):lvl=4;prevClr=green;barClr=orange;nextClr=orange;prevLvl=1100;nextLvl=1250;break;case(elo<1400):lvl=5;prevClr=orange;barClr=orange;nextClr=orange;prevLvl=1250;nextLvl=1400;break;case(elo<1550):lvl=6;prevClr=orange;barClr=orange;nextClr=orange;prevLvl=1400;nextLvl=1550;break;case(elo<1700):lvl=7;prevClr=orange;barClr=orange;nextLvl=red;prevLvl=1550;nextLvl=1700;break;case(elo<1850):lvl=8;prevClr=orange;barClr=red;nextClr=red;prevLvl=1700;nextLvl=1850;break;case(elo<2000):lvl=9;prevClr=red;barClr=red;nextClr=red;prevLvl=1850;nextLvl=2000;break;case(elo>=2000):lvl=10;prevClr=red;barClr=red;nextClr=red;darkgrey=red;prevLvl=2000;nextLvl=0;break;default:prevClr=grey;barClr=grey;prevLvl='Err';nextLvl='Err';break;}
-    var levelChart=new Chart(,{
-        type:'doughnut',
-        data:{
-        datasets: [
-            {
-                data: [133.3, 86.2, 52.2, 51.2, 50.2],
-                backgroundColor: [
-                    "#FF6384",
-                    "#63FF84",
-                    "#84FF63",
-                    "#8463FF",
-                    "#6384FF"
-                ],
-                borderColor: "black",
-                borderWidth: 2
-            }]},
-        options:{
-           rotation: Math.PI*0.75,
-  cutoutPercentage: 30,
-  circumference: Math.PI*1.5,
-  legend: {
-    position: 'left'
-  },
-  animation: {
-    animateRotate: false,
-    animateScale: true
-  }});
+    $(".search_button_mobile").click(function(){return $(".search_block").toggleClass("vis"),
+        $(".search_block_close").css({"display" : "block"}),
+        $(".logo").toggleClass("disable"),
+        $(".search_button_mobile").toggleClass("disable"),
+        $(".search_input").focus()
+    });
+    $(".search_block_close").click(function(){return $(".search_block").toggleClass("vis"),
+        $(".search_block_close").css({"display" : "none"}),
+        $(".search_button_mobile").toggleClass("disable"),
+        $(".logo").toggleClass("disable")
+    
+    });
     })
-
-*/
