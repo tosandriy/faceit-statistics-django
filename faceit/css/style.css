@@ -350,8 +350,10 @@ footer{
 	display: grid;
 	grid-template-columns: 1fr 2fr 1.5fr 1fr 2fr 1fr 1fr 1.5fr 1.5fr;
 }
-.thread>div{
-	text-align: center;
+.thread>div:not(:last-child){
+	display: flex;
+    justify-content: center;
+    align-items: center;
 	font-weight: 500;
 }
 .match{
@@ -435,7 +437,7 @@ footer{
 .scoreboard_team_result_lose{
 	color: #FF0101;
 }
-.scoreboard table:first-child{
+.scoreboard table:nth-child(2){
 	margin-bottom: 20px;
 }
 .table td>a{
@@ -446,6 +448,96 @@ footer{
 }
 .match_stat_row th:nth-child(2),.team_player_info td:nth-child(2){
 	text-align: left;
+}
+.match_link_block{
+	display: flex;
+}
+.match_link{
+	display: inline-block;
+	margin-left: auto;
+}
+.match_link>img{
+	height: 30px;
+}
+.select_list_block{
+	display: block;
+	position: relative;
+}
+.games_select {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;  
+  	-ms-user-select: none;
+	user-select: none; 
+	cursor: pointer;
+	position: relative;
+	width: 100%;
+	padding: 5px 10px;
+	background-color: #282828;
+	font-size: 16px;
+	overflow: hidden;
+	border-radius: 5px;
+	transition: background-color 0.1s;
+	border: none;
+	color: #fff;
+	display: flex;
+	align-items: center;
+}
+.games_select:hover{
+	background-color: #444444;
+}
+.games_select::after {
+	content: '';
+	background:url("../images/arrow_down.png") center center no-repeat;
+	background-size: 10px auto;
+	position: absolute;
+	right: 0;
+	top:0;
+	background-color: #FF5500;
+	height: 100%;
+	width: 30px;
+	
+}
+.games_select_open::after{
+	transform: rotate(180deg);
+}
+.select_list{
+	position: absolute;
+	width: 100%;
+    left: 0;
+    min-width: 100%;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    border-radius: 4px;
+    padding: 10px 0;
+    overflow: auto;
+    background: #282828;
+    z-index: 8;
+    margin-top: 16px;
+    box-shadow: 0 2px 6px 1px rgba(0,0,0,0.5);
+}
+.list-open{
+	display: flex;
+}
+.select_list_item{
+	font-family: "DINPro","Segoe UI","Mina", sans-serif;
+	height: 40px;
+	font-size: 16px;
+	outline: none;
+	border:none;
+	background-color: transparent;
+	color: #ffffff;
+}
+.select_list_item:not(.select_list_item_selected):hover{
+	background-color: #444444;
+}
+.select_list_item_selected{
+	background-color: #FF5500;
 }
 @media screen and (max-width: 450px) {
 	.body_stats{

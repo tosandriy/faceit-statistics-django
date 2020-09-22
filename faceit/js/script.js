@@ -121,4 +121,16 @@ $(document).ready(function(){
         $(".logo").toggleClass("disable")
     
     });
-    })
+    $(".games_select").click(function(){
+        $(this).toggleClass("games_select_open");
+        $(".select_list").toggleClass("list-open");
+    });
+    $(".select_list_item").click(function(){
+        $(".select_list_item").removeClass("select_list_item_selected");
+        $(this).toggleClass("select_list_item_selected");
+        $(".games_select").toggleClass("games_select_open");
+        $(".select_list").toggleClass("list-open");
+        $(".cur_select").html($(this).html());
+    });
+
+})
