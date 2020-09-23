@@ -224,7 +224,7 @@ footer{
 .main_stats{
 	justify-content: flex-start;
 }
-.basic_stats,.elo_graphics,.match_stats{
+.basic_stats,.elo_graphics,.match_stats,.maps_stats{
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -437,6 +437,9 @@ footer{
 .scoreboard_team_result_lose{
 	color: #FF0101;
 }
+.scoreboard table{
+	border-collapse: collapse;
+}
 .scoreboard table:nth-child(2){
 	margin-bottom: 20px;
 }
@@ -539,6 +542,48 @@ footer{
 .select_list_item_selected{
 	background-color: #FF5500;
 }
+.maps_stats_title{
+	margin-bottom: 20px;
+}
+.maps_stats{
+	background-color: #282828;
+}
+.maps_stats_table{
+	border-collapse:collapse;
+	width: 100%;
+	font-size: 16px;
+}
+.maps_stats_table th,.maps_stats_table td {
+	padding: 10px;
+	text-align: center;
+}
+.maps_stats_table tr{
+	background-color:#141414; 
+}
+.maps_stats_table_thread{
+	border-bottom: 10px solid #282828;
+}
+.map_cell{
+	position: relative;
+	width: 150px;
+}
+.map_cell>img{
+	top: 0;
+	left: 0;
+	height: 100%;
+	position: absolute;
+	z-index: 0;
+	pointer-events: none;
+	user-select: none;
+}
+.map_cell>span{
+	font-size: 20px;
+	text-shadow: 0 0 5px rgba(0,0,0,0.8);
+	position: relative;
+	right: 15px;
+	z-index: 999;
+}
+
 @media screen and (max-width: 450px) {
 	.body_stats{
 		background-size:cover;
